@@ -1,0 +1,46 @@
+<template>
+    <div>
+        <h1>
+            JavaScript comments
+        </h1>
+        <h2>
+              Enter the First number : <input id="num1"><br><br>
+    Enter the Second number: <input id="num2"><br><br>
+      
+    <button onclick="add()">
+        Sum
+    </button>
+      
+    <input id="sum">
+        </h2>
+    </div>
+</template>
+
+
+<script>
+ /* Script to get two input from user
+        and add them */
+        function add() {
+              
+            /* Declare three variable */
+            var x, y, z;
+              
+            /* Input the two nos. num1, num2
+            Input num1 and store it in x
+            Input num2 and store it in y
+            The sum is stored in a variable z*/
+            x = Number(document.getElementById("num1").value); 
+            y = Number(document.getElementById("num2").value);
+            z = x + y;
+              
+            document.getElementById("sum").value = z;
+        }
+
+         add()
+
+
+export default defineComponent {
+    name:"GfG",
+    
+}
+</script>
