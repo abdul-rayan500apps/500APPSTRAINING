@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm(user) {
+  if (user != "") {
+    document.write(document.getElementById("user").value = "Hello , " + user.value);
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>Enter your details</h2>
+
+<form name="myForm"  onsubmit="validateForm(user)" >
+  Name: <input type="text" id="user" name="fname" placeholder="Enter Name" required><br><br>
+  Password: <input type="password" placeholder="Enter password" required><br><br>
+  <button onsubmit="validateForm(user)" >Submit</button>
+
+</body>
+</html>
