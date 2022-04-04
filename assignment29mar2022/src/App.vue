@@ -10,7 +10,7 @@
     <qstn-2 location="location:Hyderabad"/>-->
     <Qstn6 />
     <Bcards />
-    <Gfg />
+    <!--<Gfg />>-->
     
   </div>
 </template>
@@ -21,7 +21,7 @@ import Qstn1 from './components/Qstn1.vue'
 import Qstn2 from './components/Qstn2.vue'
 import Qstn6 from './components/Qstn6.vue'
 import Bcards from './components/Bcards.vue'
-import Gfg from './components/Gfg.vue'
+//import Gfg from './components/Gfg.vue'
 export default {
   name: 'App',
   components: {
@@ -30,7 +30,7 @@ export default {
     Qstn2,
     Qstn6,
     Bcards,
-    Gfg
+    //Gfg
   }
 }
 </script>
