@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Qstn10 />
-    <Qstn3 category1="category1"/>
+    <Qstn3 />
+    <Qstn5 />
   </div>
   
 </template>
@@ -9,11 +10,13 @@
 <script>
 import Qstn10 from './components/Qstn10.vue'
 import Qstn3 from './components/Qstn3.vue'
+import Qstn5 from './components/Qstn5.vue'
 export default {
   name: 'App',
   components: {
     Qstn10,
-    Qstn3
+    Qstn3,
+    Qstn5,
     
 
     
