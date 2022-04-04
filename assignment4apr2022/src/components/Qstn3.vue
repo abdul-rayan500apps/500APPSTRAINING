@@ -1,23 +1,46 @@
 <template>
   <div>
-    <p>Question3</p>
-   <Qstn3 :category1="category1"></Qstn3>
+    <h4>third question</h4>
+
+    <button @click="fun1()">click here</button>
   </div>
 </template>
+
 <script>
 export default {
-  name: "QstN3",
-  
-  data() {
-    return {
-      category1: [
+  name: "thirdQues",
+
+  methods: {
+    fun1() {
+      this.arrobj = [
         {
-          name: "cat1",
-          description: "it is cat1",
-          details: ["name", "category", "age", "contact"],
+          category1: [
+            {
+              name: "cat1",
+              description: "it is cat1",
+
+              details: ["name", "category", "age", "contact"],
+            },
+          ],
         },
-      ],
-    };
+
+        {
+          category2: [
+            {
+              name: "cat2",
+
+              description: "it is cat2",
+
+              details: ["name2", "category2", "age2", "contact2"],
+            },
+          ],
+        },
+      ];
+
+      console.log(this.arrobj[0].category1[0].details);
+
+      console.log(this.arrobj[1].category2[0].details);
+    },
   },
 };
 </script>
