@@ -5,18 +5,21 @@
   <Home/>
   <Add/>
   
+  
  
   </div>
 </template>
 
 <script>
 import Add from './components/Add.vue';
-import Home from './components/Home.vue'
+import Home from '@/components/Home.vue'
+
 export default {
   name: "App",
   components: {
     Home,
-    Add
+    Add,
+    
      
     
     
