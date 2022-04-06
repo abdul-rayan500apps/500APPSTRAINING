@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <router-view />
-    <static name="abdul" mail="rayan.abdul53@gmail.com" phone="100" />
+    <!--<static name="abdul" mail="rayan.abdul53@gmail.com" phone="100" />-->
+    <Dynamic : name="name" :mail="mail" :phone="phone"></Dynamic>
   </div>
 </template>
 
 <script>
-import Static from './components/Static.vue'
+
+
 
 
 export default {
   name: 'App',
   components: {
+    
     
    
   },

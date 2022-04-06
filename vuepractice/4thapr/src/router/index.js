@@ -4,6 +4,7 @@ import HelloWorld from '../components/HelloWorld'
 import About from "../components/About"
 import Second from "../components/Second"
 import Static from "@/components/Static"
+import Dynamic from '@/components/Dynamic'
 
 
 vue.use(Router)
@@ -28,6 +29,11 @@ const routes = [
         path:'/static',
         name:"Static",
         component:Static
+    },
+    {
+        path:'/dynamic',
+        name:"dynamic",
+        component:Dynamic
     }
 ]
 let router = new Router({routes})
