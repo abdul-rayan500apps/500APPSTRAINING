@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <h1>The setTime out</h1>
+
+    <p id="demo"></p>
+
+</body>
+
+<script>
+
+    function currentTime() {
+
+
+        
+        const date = new Date();
+
+        document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+
+        setTimeout(function () { currentTime() }, 5000);
+
+    }
+
+    currentTime();
+
+</script>
+
+</html>
