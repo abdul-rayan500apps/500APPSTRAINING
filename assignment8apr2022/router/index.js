@@ -7,13 +7,13 @@ import BTable from "@/components/Table.vue";
 import ApiFetchData from "@/components/Apidata.vue";
 import AxioS from "@/components/api2.vue";
 import FormTags from "@/components/FormTags.vue";
-import QuestioN2 from "@/components/Question2";
-import QuestioN7 from "@/components/Question7";
-import QuestioN6 from "@/components/Question6";
 import QuestioN1 from "@/components/Question1"
-
-
-
+import QuestioN2 from "@/components/Question2";
+import QuestioN6 from "@/components/Question6";
+import QuestioN7 from "@/components/Question7";
+import QuestioN4 from "@/components/Question4"
+import QuestioN5 from "@/components/Question5"
+//import PracticE from '@/components/practice'
 
 
 
@@ -76,7 +76,16 @@ const routes = [
         name:"QuestioN1",
         component:QuestioN1,
     },
-
+    {
+        path:'/4TH',
+        name:"QuestioN4",
+        component:QuestioN4,
+    },
+    {
+        path:'/5TH',
+        name:"QuestioN5",
+        component:QuestioN5,
+    },
 
 
 
