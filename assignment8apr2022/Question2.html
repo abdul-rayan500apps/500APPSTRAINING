@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+    <h1>Multiply and Divide</h1>
+
+    <form>
+
+        1st number:<input type="text" id="id" /><br><br>
+
+        2nd number:<input type="text" id="id1" /><br><br>
+
+        <input type="button" onClick="multi()" Value="Multiply">
+
+        <input type="button" onClick="div()" Value="Divide">
+
+    </form>
+
+</head>
+
+
+<body>
+
+    <p id="result"></p>
+
+    <script>
+
+        function multi() {
+
+            var n1 = document.getElementById("id").value;
+
+            var n2 = document.getElementById("id1").value;
+
+            document.getElementById("result").innerHTML = "This result is" + " " + n1 * n2;
+
+        }
+
+        function div() {
+
+            var n1 = document.getElementById("id").value;
+
+            var n2 = document.getElementById("id1").value;
+
+            document.getElementById("result").innerHTML = "This result is" + " " + n1 / n2;
+
+        }
+
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+    <h3 align="center">Users list in Alphabatical and Reverse</h3>
+
+    <center><button onclick="f1()">Alphabatical</button>
+
+        <button onclick="f2()">Reverse</button>
+    </center>
+
+</head>
+
+<body>
+
+    <script>
+
+
+        let Users =
+
+
+            [{ name: '500apps', id: 1 },
+
+
+            { name: 'Technologies', id: 2 },
+
+
+            { name: 'Agile', id: 3 },
+
+
+            { name: 'Mantra', id: 4 },
+
+
+            { name: 'Clockly', id: 5 },
+
+
+            { name: 'CRM', id: 6 },
+
+
+            { name: '500apps', id: 7 }]
+
+
+        let field = 'name';
+
+
+        let reverse = Users.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString()))
+
+
+        function f1() {
+
+
+            console.log(Users.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString())));
+
+
+        }
+
+
+        function f2() {
+
+
+            console.log(reverse.reverse())
+
+
+        }
+
+    </script>
+
+</body>
+
+
+</html>
