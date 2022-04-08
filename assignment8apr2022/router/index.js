@@ -13,6 +13,7 @@ import QuestioN6 from "@/components/Question6";
 import QuestioN7 from "@/components/Question7";
 import QuestioN4 from "@/components/Question4"
 import QuestioN5 from "@/components/Question5"
+import QuestioN3 from "@/components/Question3"
 //import PracticE from '@/components/practice'
 
 
@@ -86,7 +87,11 @@ const routes = [
         name:"QuestioN5",
         component:QuestioN5,
     },
-
+    {
+        path:'/3rd',
+        name:"QuestioN3",
+        component:QuestioN3,
+    }
 
 
 
