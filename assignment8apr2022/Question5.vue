@@ -1,30 +1,72 @@
 <template>
-  <div>
-    <h1>Question no 5</h1>
 
-    {{ txt }}
-  </div>
+<div>
+
+<b-table striped hover :items="posts" :fields="fields"> </b-table>
+
+
+{{ posts }}
+
+</div>
+
 </template>
 
+
+
 <script>
-var axios = require("axios").default;
+
 
 export default {
-  name: "QuestioN5",
 
-  data() {
-    return {
-      txt: "",
-    };
-  },
+name: "QuestioN5",
 
-  mounted() {
-    axios
 
-      .get("http://universities.hipolabs.com/search?country=$%7BCountryName")
+data() {
 
-      .then((response) => (this.txt = response));
-  },
+return {
+
+posts: " ",
+
 };
+
+},
+
+
+methods: {
+
+async getData() {
+
+try {
+
+let response = await fetch(
+
+"http://universities.hipolabs.com/search?country"
+
+);
+
+
+this.posts = await response.json();
+
+} catch (error) {
+
+console.log(error);
+
+}
+
+},
+
+},
+
+
+created() {
+
+this.getData();
+
+},
+
+};
+
 </script>
+
+
 
