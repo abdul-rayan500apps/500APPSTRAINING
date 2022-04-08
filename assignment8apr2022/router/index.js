@@ -9,7 +9,8 @@ import AxioS from "@/components/api2.vue";
 import FormTags from "@/components/FormTags.vue";
 import QuestioN2 from "@/components/Question2";
 import QuestioN7 from "@/components/Question7";
-import QuestioN6 from "@/components/Question6"
+import QuestioN6 from "@/components/Question6";
+import QuestioN1 from "@/components/Question1"
 
 
 
@@ -69,6 +70,11 @@ const routes = [
         path:'/drop',
         name:"QuestioN6",
         component:QuestioN6,
+    },
+    {
+        path:'/1ST',
+        name:"QuestioN1",
+        component:QuestioN1,
     },
 
 
