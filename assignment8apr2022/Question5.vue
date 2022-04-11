@@ -1,72 +1,65 @@
 <template>
+  <div>
+    <b-form-input
+      v-model="value"
+      placeholder="enter country name"
+      required
+    ></b-form-input>
 
-<div>
+    <button @click="getData()">click button</button>
 
-<b-table striped hover :items="posts" :fields="fields"> </b-table>
+    <!--<b-table striped hover :items="posts" :fields="fields"> </b-table>-->
 
+    <b-container class="bv-example-row">
+      <b-card>
+        <b-card-text v-for="data1 in posts" :key="data1.id">
+          <b-card
+            ><b-row>
+              <b-col>University Name:{{ data1.name }}</b-col> </b-row
+            ><br />
 
-{{ posts }}
+            <b-row>
+              <b-col>Domain Name:{{ data1.domains }}</b-col>
 
-</div>
-
+              <b-col>Website Name:{{ data1.web_pages }}</b-col>
+            </b-row></b-card
+          >
+        </b-card-text>
+      </b-card>
+    </b-container>
+  </div>
 </template>
 
-
-
 <script>
-
-
 export default {
+  name: "QueS5",
 
-name: "QuestioN5",
+  data() {
+    return {
+      posts: " ",
 
+      fields: ["name", "domains", "state-province", "web-pages"],
+    };
+  },
 
-data() {
+  methods: {
+    async getData() {
+      try {
+        let response = await fetch(
+          "http://universities.hipolabs.com/search?country=" + this.value
+        );
 
-return {
+        this.posts = await response.json();
 
-posts: " ",
+        //this.value=this.posts;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
 
+  created() {
+    this.getData();
+  },
 };
-
-},
-
-
-methods: {
-
-async getData() {
-
-try {
-
-let response = await fetch(
-
-"http://universities.hipolabs.com/search?country"
-
-);
-
-
-this.posts = await response.json();
-
-} catch (error) {
-
-console.log(error);
-
-}
-
-},
-
-},
-
-
-created() {
-
-this.getData();
-
-},
-
-};
-
 </script>
-
-
-
